@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import Head from 'next/head';
 import NextLink from 'next/link';
 import {
@@ -31,11 +31,9 @@ import useStyles from '../utils/styles';
 import { Store } from '../utils/Store';
 import { getError } from '../utils/error';
 import Cookies from 'js-cookie';
-import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useSnackbar } from 'notistack';
 import axios from 'axios';
-import { useEffect } from 'react';
 
 export default function Layout({ title, description, children }) {
   const router = useRouter();
